@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class SideScrolling : MonoBehaviour
 {
     [SerializeField] private Transform player;
