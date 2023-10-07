@@ -43,22 +43,13 @@ public class GameManager : MonoBehaviour
         coins = 0;
         LoadLevel(1,1);
     }
-    private void LoadLevel(int world,int stage)
+    public void LoadLevel(int world,int stage)
     {
         this.world=world;
         this.stage=stage;
         SceneManager.LoadScene($"{world}-{stage}");
     }
-
-    public void NextLevel()
-    {
-        if(world==1 && stage == 10)
-        {
-            LoadLevel(world+1,1);
-        }
-        LoadLevel(world,stage+1);
-    }
-
+    
     public void ResetLevel(float delay)
     {
         Invoke(nameof(ResetLevel),delay);
